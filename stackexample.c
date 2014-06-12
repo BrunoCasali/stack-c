@@ -46,6 +46,17 @@ void list_all(Stack* p){
 	}
 }
 
+int counter(Stack* p){
+	int i = 0, count = 0;
+	while(i != (MAX - 1)){
+		if(p -> value[i] != 0){
+			count++;
+		}
+		i++;
+	}
+	return count;
+}
+
 void list_filled(Stack* p){
 	
 	int i = 0;
@@ -72,6 +83,7 @@ int main(){
 	push(s, 73);
 	pop(s, 2);
 	list_filled(s);
+	printf("\n\t VALOR %i ", counter(s));
 	return 0;
 }
 
